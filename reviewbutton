@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Buttons</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f2f6;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .container h1 {
+    margin-bottom: 30px;
+    color: #1877f2;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555;
+    display: block;
+  }
+  .form-group input[type="text"], .form-group input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f0f2f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"] {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  input[type="submit"]:hover {
+    background-color: #007bff;
+    border-color: #0056b3;
+    color: #ffffff;
+  }
+  .preview-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 14px;
+    margin-top: 14px;
+    overflow: hidden;
+    position: relative;
+  }
+  .code-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 20px;
+    white-space: nowrap;
+  }
+  .fade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
+  }
+  .dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  .copy-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #4caf50;
+    color: #ffffff;
+    background-color: #4caf50;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .copy-button:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+  }
+  .button4 {
+     border-radius: 8px;
+     padding: 12px 24px;
+       cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {
+     border-radius: 8px;
+     padding: 12px 24px;
+     font-size: 16px;
+
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+     background-color: #e7e7e7;
+}
+
+.button5 {
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+.button5:hover {
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #e7e7e7;
+}
+
+  .live-preview {
+    background-color: #f0f2f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-y: auto;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Review Buttons v2.1</h1>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="google">Google</label>
+      <input type="text" id="google" placeholder="Enter Google Review Link">
+    </div>
+    <div class="form-group">
+      <label for="facebook">Facebook</label>
+      <input type="text" id="facebook" placeholder="Enter Facebook Review Link">
+    </div>
+    <div class="form-group">
+      <label for="yelp">Yelp</label>
+      <input type="text" id="yelp" placeholder="Enter Yelp Review Link">
+    </div>
+    <div class="form-group">
+      <label for="realtor">Realtor</label>
+      <input type="text" id="realtor" placeholder="Enter Realtor Review Link">
+    </div>
+    <div class="form-group">
+      <label for="zillow">Zillow</label>
+      <input type="text" id="zillow" placeholder="Enter Zillow Review Link">
+    </div>
+    <div class="form-group">
+      <label for="trustpilot">Trustpilot</label>
+      <input type="text" id="trustpilot" placeholder="Enter Trustpilot Review Link">
+    </div>
+
+<table width="100%"><td align="left">
+    <button class="button4" onclick="clearFields()">Clear All</button>
+    </td>
+<td align="right">
+        <input type="submit" value="Generate 'Review Me'" onclick="generateHTML()"> 
+    <input type="submit" value="Generate 'Reviews Us'" onclick="generateReviewsUsHTML()"> 
+</td>
+</table>
+  </div>
+  <div class="preview-box">
+    <div class="fade"></div>
+    <div class="code-box" id="generatedCode"></div>
+  </div>
+  <br>
+  <button class="copy-button" id="copyButton" style="width: 100%;">Copy Code</button>
+  <div class="live-preview" id="livePreview"></div>
+</div>
+
+
+<script>
+function generateHTML() {
+    var googleHandle = document.getElementById('google').value;
+    var facebookHandle = document.getElementById('facebook').value;
+    var yelpHandle = document.getElementById('yelp').value;
+    var realtorHandle = document.getElementById('realtor').value;
+    var zillowHandle = document.getElementById('zillow').value;
+    var trustpilotHandle = document.getElementById('trustpilot').value;
+
+    var numFilledFields = countFilledFields([googleHandle, facebookHandle, yelpHandle, realtorHandle, zillowHandle, trustpilotHandle]);
+    var htmlCode = buildHTMLCode(googleHandle, facebookHandle, yelpHandle, realtorHandle, zillowHandle, trustpilotHandle, numFilledFields);
+
+    document.getElementById('generatedCode').innerText = htmlCode;
+    document.getElementById('generatedCode').style.display = 'block';
+    document.getElementById('copyButton').style.display = 'block';
+    document.getElementById('livePreview').innerHTML = htmlCode;
+}
+
+function generateReviewsUsHTML() {
+    var googleHandle = document.getElementById('google').value;
+    var facebookHandle = document.getElementById('facebook').value;
+    var yelpHandle = document.getElementById('yelp').value;
+    var realtorHandle = document.getElementById('realtor').value;
+    var zillowHandle = document.getElementById('zillow').value;
+    var trustpilotHandle = document.getElementById('trustpilot').value;
+
+    var numFilledFields = countFilledFields([googleHandle, facebookHandle, yelpHandle, realtorHandle, zillowHandle, trustpilotHandle]);
+    var htmlCode = buildReviewsUsHTMLCode(googleHandle, facebookHandle, yelpHandle, realtorHandle, zillowHandle, trustpilotHandle, numFilledFields);
+
+    document.getElementById('generatedCode').innerText = htmlCode;
+    document.getElementById('generatedCode').style.display = 'block';
+    document.getElementById('copyButton').style.display = 'block';
+    document.getElementById('livePreview').innerHTML = htmlCode;
+}
+
+function countFilledFields(fields) {
+    return fields.reduce((count, field) => field ? count + 1 : count, 0);
+}
+
+function buildHTMLCode(google, facebook, yelp, realtor, zillow, trustpilot, numFilledFields) {
+    var htmlCode = '<center><table>';
+    if (numFilledFields >= 3) {
+        if (google) htmlCode += addTableCellLong(google, "https://i.imgur.com/TPW62tt.png", 10, 600);
+        if (facebook) htmlCode += addTableCellLong(facebook, "https://i.imgur.com/DaOlCND.png", 10, 600);
+        if (yelp) htmlCode += addTableCellLong(yelp, "https://i.imgur.com/7QkaeoW.png", 10, 600);
+        if (realtor) htmlCode += addTableCellLong(realtor, "https://i.imgur.com/JX7N4Ui.png", 10, 600);
+        if (zillow) htmlCode += addTableCellLong(zillow, "https://i.imgur.com/5S997wx.png", 10, 600);
+        if (trustpilot) htmlCode += addTableCellLong(trustpilot, "https://i.imgur.com/tsNmvqq.png", 10, 600);
+    } else {
+        if (google) htmlCode += addTableCell(google, "https://i.imgur.com/yhuVGUr.png", 10, 350);
+        if (facebook) htmlCode += addTableCell(facebook, "https://i.imgur.com/dK2anim.png", 10, 350);
+        if (yelp) htmlCode += addTableCell(yelp, "https://i.imgur.com/oKq39PH.png", 10, 350);
+        if (realtor) htmlCode += addTableCell(realtor, "https://i.imgur.com/XDhpKBC.png", 10, 350);
+        if (zillow) htmlCode += addTableCell(zillow, "https://i.imgur.com/yRCSnAq.png", 10, 350);
+        if (trustpilot) htmlCode += addTableCell(trustpilot, "https://i.imgur.com/bqCAvY2.png", 10, 350);
+    }
+    htmlCode += '</table></center>';
+    return htmlCode;
+}
+
+function buildReviewsUsHTMLCode(google, facebook, yelp, realtor, zillow, trustpilot, numFilledFields) {
+    var htmlCode = '<center><table>';
+     if (numFilledFields >= 3) {
+        if (google) htmlCode += addTableCellLong(google, "https://i.imgur.com/FvCQmAN.png", 10, 600);
+        if (facebook) htmlCode += addTableCellLong(facebook, "https://i.imgur.com/QfXZiPf.png", 10, 600);
+        if (yelp) htmlCode += addTableCellLong(yelp, "https://i.imgur.com/Vfa3EMw.png", 10, 600);
+        if (realtor) htmlCode += addTableCellLong(realtor, "https://i.imgur.com/qSgjAGM.png", 10, 600);
+        if (zillow) htmlCode += addTableCellLong(zillow, "https://i.imgur.com/sgzZHIZ.png", 10, 600);
+        if (trustpilot) htmlCode += addTableCellLong(trustpilot, "https://i.imgur.com/H3PKeP6.png", 10, 600);
+    } else {
+        if (google) htmlCode += addTableCell(google, "https://i.imgur.com/5mCzN9O.png", 10, 350);
+        if (facebook) htmlCode += addTableCell(facebook, "https://i.imgur.com/tuN96vG.png", 10, 350);
+        if (yelp) htmlCode += addTableCell(yelp, "https://i.imgur.com/xZQ5sh0.png", 10, 350);
+        if (realtor) htmlCode += addTableCell(realtor, "https://i.imgur.com/HGqi4y2.png", 10, 350);
+        if (zillow) htmlCode += addTableCell(zillow, "https://i.imgur.com/jpn8ja0.png", 10, 350);
+        if (trustpilot) htmlCode += addTableCell(trustpilot, "https://i.imgur.com/PjJdRj1.png", 10, 350);
+    }
+    htmlCode += '</table></center>';
+    return htmlCode;
+}
+
+function addTableCellLong(link, image, padding, width) {
+    return `<tr><td style="padding: ${padding}px"><a href="${link}" target="_blank"><img src="${image}" style="width: ${width}px;"></a></td></tr>`;
+}
+
+function addTableCell(link, image, padding, width) {
+    return `<td style="padding: ${padding}px"><a href="${link}" target="_blank"><img src="${image}" style="width: ${width}px;"></a></td>`;
+}
+
+function clearFields() {
+    document.getElementById('google').value = "";
+    document.getElementById('facebook').value = "";
+    document.getElementById('yelp').value = "";
+    document.getElementById('realtor').value = "";
+    document.getElementById('zillow').value = "";
+    document.getElementById('trustpilot').value = "";
+    document.getElementById('generatedCode').innerText = "";
+    document.getElementById('livePreview').innerHTML = "";
+}
+
+document.getElementById('copyButton').addEventListener('click', function() {
+    var codeToCopy = document.getElementById('generatedCode').innerText;
+    navigator.clipboard.writeText(codeToCopy).then(function() {
+        alert('Code copied to clipboard!');
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+});
+</script>
+</body>
+</html>
